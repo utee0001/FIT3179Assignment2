@@ -1,0 +1,16 @@
+
+  h1{
+    font-weight: 500;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
+  h2{
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+   body{
+     background-color: rgba(0, 102, 255, 0.438);
+   }
+  .small-font{
+      font-size: 14px;
+  }
