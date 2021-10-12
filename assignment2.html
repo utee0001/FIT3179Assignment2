@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    <h1>World Happy Score, GDP, Life Expectancy Visualisation</h1>
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+          <h2>World Map for Happiness Score in the year of 2019</h2>
+        </div>
+      </div>
+
+    <div id="map" class ="vis-container"></div>
+    
+    <div class="pure-g-r">
+    <div class="pure-u-1-3">
+            <div class="pure-u-1-2">
+            <p>This interactive visualisation provide a detail about the happiness score for countries around the world in the year of 2019. </p>
+            <p>From adjusting the Happiness Score in the slider bar, it shows that countries with low happiness score are mainly found in Africa and some countries in South Asia </p>
+      <h2>GDP vs Happiness Score vs Life Expectancy visualisation</h2>
+      <p>This visulisation is designed to provide a overalll view on the relationship between GDP, Happiness Score and Life Expectancy and how they relate to each other.</p>
+
+    </div>
+    <div id="scatterPlot" class ="vis-container"></div>
+  </div>
+    
+  </div>
+    </div>
+  <script type ="text/javascript">
+    var vis ="multiple_map.vg.json";
+    var vis2 = "scatterPlot.vg.json"
+    vegaEmbed('#map',vis).then(function(result){}).catch(console.error);
+    vegaEmbed('#scatterPlot',vis2).then(function(result){}).catch(console.error);
+  </script>
+  </body>
+</html>
